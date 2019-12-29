@@ -1,10 +1,186 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    </head>
-    <body>
-        <script>
-            alert('pee');
-        </script>
-    </body>
+<head>
+<h1>Text_survive</h1>
+</head>
+<body>
+<style>
+</style>
+ <h3 id="output"></h3>
+<h3 id="Hunger"></h3>
+<h3 id="Hydration"></h3>
+<h3 id="Energy"></h3>
+<h3 id="Money"></h3>
+<h2 id="Event"></h2>
+<script>
+var WE = "No Event";
+function EventRoll(){
+WE=WE="No Event";
+var EventChance=Math.floor(Math.random() * 4) + 1;
+if(EventChance == 1){
+var ChooseEvent=Math.floor(Math.random() * 10) + 0//4 is temporary
+if(ChooseEvent == 1){
+WE = WE = "Hunger Drained";
+hunger=hunger-15;
+}
+if(ChooseEvent == 2){
+WE = WE = "Hunger Gained";
+hunger=hunger+15;
+}
+if(ChooseEvent == 3){
+WE = WE = "Health Drained";
+health=health-15;
+}
+if(ChooseEvent == 4){
+WE = WE = "Health Gained";
+health=health+15;
+}
+if(ChooseEvent == 5){
+WE = WE = "Hydration Gained";
+health=health+15;
+}
+if(ChooseEvent == 6){
+WE = WE = "Hydration Drained";
+health=health+15;
+}
+if(ChooseEvent == 7){
+WE = WE = "Energy Gained";
+health=health+15;
+}
+if(ChooseEvent == 8){
+WE = WE = "Energy Drained";
+health=health+15;
+}
+if(ChooseEvent == 9){
+WE = WE = "Money Gained";
+health=health+15;
+}
+if(ChooseEvent == 10){
+WE = WE = "Money Drained";
+health=health+15;
+}
+}
+}
+
+function CapCheck(){
+if(health>100){
+health=health=100
+}
+if(hunger>100){
+hunger=hunger=100
+}
+if(hydration>100){
+hydration=hydration=100
+}
+if(energy>100){
+energy=energy=100
+}
+}
+
+function LoseCheck() {
+if (health<=0){
+alert("u lose");
+}
+if (hunger<=0){
+alert("u lose");
+}
+if (hydration<=0){
+alert("u lose");
+}
+if (energy<=0){
+alert("u lose");
+}
+}
+
+function Money0() {
+if (money<=0){
+money=money=0
+}
+}
+
+var health=40;//integers
+var hunger=50;
+var money=100;
+var hydration=50
+var energy=50
+var FinalM= ["Money: "+ money];
+var FinalH= ["health: "+ health];//to string intger and text together
+var FinalHU= ["hunger: "+ hunger];
+var FinalHY= ["hydration: "+hydration];
+var FinalE= ["energy: " + energy];
+function R() {
+var FinalM= ["Money: "+ money];
+var FinalH= ["health: "+ health];
+var FinalHU= ["hunger: "+ hunger];
+var FinalHY= ["hydration: "+hydration];
+var FinalE= [ "energy: "+ energy];
+document.getElementById("output").innerHTML=FinalH;
+document.getElementById("Hunger").innerHTML=FinalHU;
+document.getElementById("Money").innerHTML=FinalM;
+document.getElementById("Hydration").innerHTML=FinalHY
+document.getElementById("Energy").innerHTML=FinalE
+document.getElementById("Event").innerHTML=WE;
+}
+R()
+health=health+10;
+R()
+
+function meds(){
+EventRoll()
+if (money>0){
+money=money-20;
+var healChance=Math.floor(Math.random() * 100) + 1;
+if(healChance>65){
+health=health+10;
+} 
+}
+CapCheck()
+R()
+}
+
+function eat(){
+EventRoll()
+if (money>0){
+money=money-10;
+Money0()
+var HPG=Math.floor(Math.random() * 15) + 0;//hpg means hunger points gained
+hunger=hunger+HPG;
+}CapCheck()
+R()
+}
+
+function work() {
+EventRoll()
+money=money+10
+CapCheck()
+R()
+}
+
+function drink() {
+EventRoll()
+if (money>0){
+hydration=hydration+Math.floor(Math.random() * 15) + 0;;
+money=money-5;
+}
+CapCheck()
+R()
+}
+
+function rest() {
+EventRoll()
+energy=energy+20
+CapCheck()
+R()
+}
+
+
+
+</script>
+<button type=button onclick=meds()>Medicine (20 Money)</button>
+<button type=button onclick=eat()>Eat (10 Money)</button>
+<button type=button onclick=work()>Work</button>
+<button type=button onclick=drink()>Drink (5 money)</button>
+<button type=button onclick=rest()>Rest</button>
+</body>
+
 </html>
