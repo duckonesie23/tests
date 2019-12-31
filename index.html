@@ -18,46 +18,66 @@ function EventRoll(){
 WE=WE="No Event";
 var EventChance=Math.floor(Math.random() * 4) + 1;
 if(EventChance == 1){
-var ChooseEvent=Math.floor(Math.random() * 10) + 0//4 is temporary
+var ChooseEvent=Math.floor(Math.random() * 15) + 1//4 is temporary
 if(ChooseEvent == 1){
-WE = WE = "Hunger Drained";
+WE = WE = "Your belly started grumbling... LOUD! (-15 Hunger)";
 hunger=hunger-15;
 }
 if(ChooseEvent == 2){
-WE = WE = "Hunger Gained";
+WE = WE = "A random person gave you a free cake! (+15 hunger)";
 hunger=hunger+15;
 }
 if(ChooseEvent == 3){
-WE = WE = "Health Drained";
+WE = WE = "You got the flu (-15 health)";
 health=health-15;
 }
 if(ChooseEvent == 4){
-WE = WE = "Health Gained";
+WE = WE = "You persuaded your doctor to give you free medical treatment. (+15 Health)";
 health=health+15;
 }
 if(ChooseEvent == 5){
-WE = WE = "Hydration Gained";
-health=health+15;
+WE = WE = "You found an untouched water jug on the floor. (+15 hydration)";
+hydration=hydration+15;
 }
 if(ChooseEvent == 6){
-WE = WE = "Hydration Drained";
-health=health+15;
+WE = WE = "You go on a hike though forget your water bottle. (-15 hydration)";
+hydration=hydration-15;
 }
 if(ChooseEvent == 7){
-WE = WE = "Energy Gained";
-health=health+15;
+WE = WE = "You won 2 free energy drinks! (+15 energy)";
+energy=energy+15;
 }
 if(ChooseEvent == 8){
-WE = WE = "Energy Drained";
-health=health+15;
+WE = WE = "You take a jog for 9 hours. (-15 energy";
+energy=energy-15;
 }
 if(ChooseEvent == 9){
-WE = WE = "Money Gained";
-health=health+15;
+WE = WE = "You got a bonus. (+15 money)";
+money=money+15;
 }
 if(ChooseEvent == 10){
-WE = WE = "Money Drained";
-health=health+15;
+WE = WE = "A little kid ripped you off. (-15 money";
+money=money-15;
+}
+if(ChooseEvent == 11){
+WE = WE = "There are no food stores in a 5 mile radius. (-15 hunger)";
+hunger=hunger-15;
+}
+if(ChooseEvent == 12){
+WE = WE = "You have diarrhea. (-15 health)";
+health=health-15;
+}
+if(ChooseEvent == 13){
+WE = WE = "The air is so dry it takes water out of your body. (-15 hydration)";
+hydration=hydration-15;
+}
+if(ChooseEvent == 14){
+WE = WE = "You couldn't sleep last night. (-15 energy)";
+energy=energy-15;
+}
+if(ChooseEvent == 15){
+WE = WE = "You accidently buy to many wires (-15 money)";
+money=money-15;
 }
 }
 }
