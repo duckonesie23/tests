@@ -172,6 +172,9 @@ R()
 function work() {
 EventRoll()
 money=money+10
+hunger=hunger-5;
+ hydration=ydration-5
+ health=health - 5
 CapCheck()
 R()
 }
@@ -189,6 +192,9 @@ R()
 function rest() {
 EventRoll()
 energy=energy+20
+ health=health +5;
+ hunger=hunger-5;
+ hydration=hydration-5;
 CapCheck()
 R()
 }
