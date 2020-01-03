@@ -100,15 +100,35 @@ energy=energy=100
 function LoseCheck() {
 if (health<=0){
 alert("u lose");
+ health=health=50
+ hunger=hunger=50
+ hydration=hydration=50
+ energy=energy=50
+ money=money=100
 }
 if (hunger<=0){
 alert("u lose");
+ health=health=50
+ hunger=hunger=50
+ hydration=hydration=50
+ energy=energy=50
+ money=money=100
 }
 if (hydration<=0){
 alert("u lose");
+ health=health=50
+ hunger=hunger=50
+ hydration=hydration=50
+ energy=energy=50
+ money=money=100
 }
 if (energy<=0){
 alert("u lose");
+ health=health=50
+ hunger=hunger=50
+ hydration=hydration=50
+ energy=energy=50
+ money=money=100
 }
 }
 
@@ -152,7 +172,7 @@ if (money>0){
 money=money-20;
 var healChance=Math.floor(Math.random() * 100) + 1;
 if(healChance>65){
-health=health+10;
+health=health+25;
 } 
 }
 CapCheck()
