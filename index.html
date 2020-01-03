@@ -147,6 +147,7 @@ R()
 
 function meds(){
 EventRoll()
+ LoseCheck()
 if (money>0){
 money=money-20;
 var healChance=Math.floor(Math.random() * 100) + 1;
@@ -160,6 +161,7 @@ R()
 
 function eat(){
 EventRoll()
+ LoseCheck()
 if (money>0){
 money=money-10;
 Money0()
@@ -171,6 +173,7 @@ R()
 
 function work() {
 EventRoll()
+ LoseCheck()
 money=money+10
 hunger=hunger-5;
  hydration=hydration-5
@@ -181,6 +184,7 @@ R()
 
 function drink() {
 EventRoll()
+ LoseCheck()
 if (money>0){
 hydration=hydration+Math.floor(Math.random() * 15) + 0;;
 money=money-5;
@@ -191,6 +195,7 @@ R()
 
 function rest() {
 EventRoll()
+ LoseCheck()
 energy=energy+20
  health=health +5;
  hunger=hunger-5;
