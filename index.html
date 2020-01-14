@@ -1,263 +1,493 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
 <h1>Text_survive</h1>
+
 </head>
+
 <body>
+
 <style>
+
 </style>
+
  <h3 id="output"></h3>
+
 <h3 id="Hunger"></h3>
+
 <h3 id="Hydration"></h3>
+
 <h3 id="Energy"></h3>
+
 <h3 id="Money"></h3>
+
 <h2 id="Event"></h2>
+
 <script>
+
 var WE = "No Event";
+
 function EventRoll(){
+
 WE=WE="No Event";
+
 var EventChance=Math.floor(Math.random() * 4) + 1;
+
 if(EventChance == 1){
+
 var ChooseEvent=Math.floor(Math.random() * 15) + 1//4 is temporary
+
 if(ChooseEvent == 1){
+
 WE = WE = "Your belly started grumbling... LOUD! (-15 Hunger)";
+
 hunger=hunger-15;
+
 }
+
 if(ChooseEvent == 2){
+
 WE = WE = "A random person gave you a free cake! (+15 hunger)";
+
 hunger=hunger+15;
+
 }
+
 if(ChooseEvent == 3){
+
 WE = WE = "You got the flu (-15 health)";
+
 health=health-15;
+
 }
+
 if(ChooseEvent == 4){
+
 WE = WE = "You persuaded your doctor to give you free medical treatment. (+15 Health)";
+
 health=health+15;
+
 }
+
 if(ChooseEvent == 5){
+
 WE = WE = "You found an untouched water jug on the floor. (+15 hydration)";
+
 hydration=hydration+15;
+
 }
+
 if(ChooseEvent == 6){
+
 WE = WE = "You go on a hike though forget your water bottle. (-15 hydration)";
+
 hydration=hydration-15;
+
 }
+
 if(ChooseEvent == 7){
+
 WE = WE = "You won 2 free energy drinks! (+15 energy)";
+
 energy=energy+15;
+
 }
+
 if(ChooseEvent == 8){
+
 WE = WE = "You take a jog for 9 hours. (-15 energy";
+
 energy=energy-15;
+
 }
+
 if(ChooseEvent == 9){
+
 WE = WE = "You got a bonus. (+15 money)";
+
 money=money+15;
+
 }
+
 if(ChooseEvent == 10){
+
 WE = WE = "A little kid ripped you off. (-15 money";
+
 money=money-15;
+
 }
+
 if(ChooseEvent == 11){
+
 WE = WE = "There are no food stores in a 5 mile radius. (-15 hunger)";
+
 hunger=hunger-15;
+
 }
+
 if(ChooseEvent == 12){
+
 WE = WE = "You have diarrhea. (-15 health)";
+
 health=health-15;
+
 }
+
 if(ChooseEvent == 13){
+
 WE = WE = "The air is so dry it takes water out of your body. (-15 hydration)";
+
 hydration=hydration-15;
+
 }
+
 if(ChooseEvent == 14){
+
 WE = WE = "You couldn't sleep last night. (-15 energy)";
+
 energy=energy-15;
+
 }
+
 if(ChooseEvent == 15){
+
 WE = WE = "You accidently buy to many wires (-15 money)";
+
 money=money-15;
+
 }
+
 }
+
 }
+
+
 
 function CapCheck(){
+
 if(health>100){
+
 health=health=100
+
 }
+
 if(hunger>100){
+
 hunger=hunger=100
+
 }
+
 if(hydration>100){
+
 hydration=hydration=100
+
 }
+
 if(energy>100){
+
 energy=energy=100
+
 }
+
 }
+
+
 
 function LoseCheck() {
+
 if (health<=0){
+
 alert("u lose");
+
  health=health=50
+
  hunger=hunger=50
+
  hydration=hydration=50
+
  energy=energy=50
+
  money=money=100
+
 }
+
 if (hunger<=0){
+
 alert("u lose");
+
  health=health=50
+
  hunger=hunger=50
+
  hydration=hydration=50
+
  energy=energy=50
+
  money=money=100
+
 }
+
 if (hydration<=0){
+
 alert("u lose");
+
  health=health=50
+
  hunger=hunger=50
+
  hydration=hydration=50
+
  energy=energy=50
+
  money=money=100
+
 }
+
 if (energy<=0){
+
 alert("u lose");
+
  health=health=50
+
  hunger=hunger=50
+
  hydration=hydration=50
+
  energy=energy=50
+
  money=money=100
+
 }
+
 }
+
+
 
 function Money0() {
+
 if (money<=0){
+
 money=money=0
+
 }
+
 }
- 
-function instructions(){
- alert("Hello! Welcome to Text-Survive!')
- alert("Text-Survive is a survival simulation game where each turn you get to eat, drink, rest, take medicine and work.")
- alert("The goal of the game is to survive for as much turns as possible.")
- alert("Though if either you health, hunger, hydration or energy goes down to zero u lose.")
- alert("The medicine button can increase your health by 25 points. Though there is a 65% chance that will happen and it costs 20 money.")
- alert("The eat button gives you 1-15 hunger points. But you have to pay 10 money")
- alert("The work button gives you 10 money. Though it decreases your health, hydration, hunger and energy by 5.")
- alert("the drink button gives you 1-15 hydration points. But you have to pay 5 money.")
- alery("The rest button increases you energy by 10 and your health by 5. But your hunger and hydration decreases by 5.")
- alert("I hope you love this game as I did creating it and GOOD LUCK!")
-       }
- 
- instructions()
- 
+
+
+
 var health=40;//integers
+
 var hunger=50;
+
 var money=100;
+
 var hydration=50
+
 var energy=50
+
 var FinalM= ["Money: "+ money];
+
 var FinalH= ["health: "+ health];//to string intger and text together
+
 var FinalHU= ["hunger: "+ hunger];
+
 var FinalHY= ["hydration: "+hydration];
+
 var FinalE= ["energy: " + energy];
+
 function R() {
+
 var FinalM= ["Money: "+ money];
+
 var FinalH= ["health: "+ health];
+
 var FinalHU= ["hunger: "+ hunger];
+
 var FinalHY= ["hydration: "+hydration];
+
 var FinalE= [ "energy: "+ energy];
+
 document.getElementById("output").innerHTML=FinalH;
+
 document.getElementById("Hunger").innerHTML=FinalHU;
+
 document.getElementById("Money").innerHTML=FinalM;
+
 document.getElementById("Hydration").innerHTML=FinalHY
+
 document.getElementById("Energy").innerHTML=FinalE
+
 document.getElementById("Event").innerHTML=WE;
+
 }
+
 R()
+
 health=health+10;
+
 R()
+
+
 
 function meds(){
+
 EventRoll()
 
+
+
 if (money>0){
+
 money=money-20;
+
 var healChance=Math.floor(Math.random() * 100) + 1;
+
 if(healChance>45){
+
 health=health+25;
+
 } 
+
 }
+
 CapCheck()
+
 R()
+
  LoseCheck()
+
 R()
+
 }
+
+
 
 function eat(){
+
 EventRoll()
 
+
+
 if (money>0){
+
 money=money-10;
+
 Money0()
+
 var HPG=Math.floor(Math.random() * 15) + 1;//hpg means hunger points gained
+
 hunger=hunger+HPG;
+
 }CapCheck()
+
 R()
+
  LoseCheck()
+
 R()
+
 }
+
+
 
 function work() {
+
 EventRoll()
+
+
 
 money=money+10
+
 hunger=hunger-5;
+
  hydration=hydration-5
+
  health=health - 5
- energy=energy-5
+
 CapCheck()
+
 R()
+
  LoseCheck()
+
 R()
+
 }
+
+
 
 function drink() {
+
 EventRoll()
+
+
 
 if (money>0){
+
 hydration=hydration+Math.floor(Math.random() * 15) + 1;;
+
 money=money-5;
-}
-CapCheck()
-R()
- LoseCheck()
-R()
+
 }
 
-function rest() {
-EventRoll()
- 
-energy=energy+10
- health=health +5;
- hunger=hunger-5;
- hydration=hydration-5;
 CapCheck()
+
 R()
+
  LoseCheck()
+
 R()
+
 }
+
+
+
+function rest() {
+
+EventRoll()
+
+ 
+
+energy=energy+20
+
+ health=health +5;
+
+ hunger=hunger-5;
+
+ hydration=hydration-5;
+
+CapCheck()
+
+R()
+
+ LoseCheck()
+
+R()
+
+}
+
+
+
+
 
 
 
 </script>
+
 <button type=button onclick=meds()>Medicine (20 Money)</button>
+
 <button type=button onclick=eat()>Eat (10 Money)</button>
+
 <button type=button onclick=work()>Work</button>
+
 <button type=button onclick=drink()>Drink (5 money)</button>
+
 <button type=button onclick=rest()>Rest</button>
+
 </body>
+
+
 
 </html>
