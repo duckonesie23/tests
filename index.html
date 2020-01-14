@@ -186,7 +186,7 @@ EventRoll()
 if (money>0){
 money=money-10;
 Money0()
-var HPG=Math.floor(Math.random() * 15) + 0;//hpg means hunger points gained
+var HPG=Math.floor(Math.random() * 15) + 1;//hpg means hunger points gained
 hunger=hunger+HPG;
 }CapCheck()
  LoseCheck()
@@ -209,7 +209,7 @@ function drink() {
 EventRoll()
 
 if (money>0){
-hydration=hydration+Math.floor(Math.random() * 15) + 0;;
+hydration=hydration+Math.floor(Math.random() * 15) + 1;;
 money=money-5;
 }
 CapCheck()
