@@ -137,7 +137,22 @@ if (money<=0){
 money=money=0
 }
 }
-
+ 
+function instructions(){
+ alert("Hello! Welcome to Text-Survive!')
+ alert("Text-Survive is a survival simulation game where each turn you get to eat, drink, rest, take medicine and work.")
+ alert("The goal of the game is to survive for as much turns as possible.")
+ alert("Though if either you health, hunger, hydration or energy goes down to zero u lose.")
+ alert("The medicine button can increase your health by 25 points. Though there is a 65% chance that will happen and it costs 20 money.")
+ alert("The eat button gives you 1-15 hunger points. But you have to pay 10 money")
+ alert("The work button gives you 10 money. Though it decreases your health, hydration, hunger and energy by 5.")
+ alert("the drink button gives you 1-15 hydration points. But you have to pay 5 money.")
+ alery("The rest button increases you energy by 10 and your health by 5. But your hunger and hydration decreases by 5.")
+ alert("I hope you love this game as I did creating it and GOOD LUCK!")
+       }
+ 
+ instructions()
+ 
 var health=40;//integers
 var hunger=50;
 var money=100;
@@ -202,6 +217,7 @@ money=money+10
 hunger=hunger-5;
  hydration=hydration-5
  health=health - 5
+ energy=energy-5
 CapCheck()
 R()
  LoseCheck()
@@ -224,7 +240,7 @@ R()
 function rest() {
 EventRoll()
  
-energy=energy+20
+energy=energy+10
  health=health +5;
  hunger=hunger-5;
  hydration=hydration-5;
