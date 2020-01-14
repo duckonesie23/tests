@@ -176,6 +176,7 @@ health=health+25;
 } 
 }
 CapCheck()
+R()
  LoseCheck()
 R()
 }
@@ -189,6 +190,7 @@ Money0()
 var HPG=Math.floor(Math.random() * 15) + 1;//hpg means hunger points gained
 hunger=hunger+HPG;
 }CapCheck()
+R()
  LoseCheck()
 R()
 }
@@ -201,6 +203,7 @@ hunger=hunger-5;
  hydration=hydration-5
  health=health - 5
 CapCheck()
+R()
  LoseCheck()
 R()
 }
@@ -213,6 +216,7 @@ hydration=hydration+Math.floor(Math.random() * 15) + 1;;
 money=money-5;
 }
 CapCheck()
+R()
  LoseCheck()
 R()
 }
@@ -225,6 +229,7 @@ energy=energy+20
  hunger=hunger-5;
  hydration=hydration-5;
 CapCheck()
+R()
  LoseCheck()
 R()
 }
